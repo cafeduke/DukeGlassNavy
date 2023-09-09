@@ -1,19 +1,23 @@
 #!/bin/bash -e
 BASEDIR=$(dirname $(readlink -f ${0}))
 BASENAME=$(basename ${0})
-THEMEDIR=$(readlink -f ${BASEDIR}/../)
+THEME_HOME=$(readlink -f ${BASEDIR}/../)
+THEME_NAME="DukeGlassNavy"
 
-echo "Generating DukeGlassNavy.gresource"
-gresource-create gresource DukeGlassNavy
+echo "Generating ${THEME_NAME}.gresource"
+gresource-create gresource ${THEME_NAME}
 
 echo ""
-echo "Updating DukeGlassNavy.gresource"
-cp DukeGlassNavy.gresource ${THEMEDIR}/gtk-3.0/gtk.gresource
-ls -l DukeGlassNavy.gresource ${THEMEDIR}/gtk-3.0/gtk.gresource
+echo "Updating ${THEME_NAME}.gresource"
+cp ${THEME_NAME}.gresource ${THEME_HOME}/gtk-3.0/gtk.gresource
+ls -l ${THEME_NAME}.gresource ${THEME_HOME}/gtk-3.0/gtk.gresource
 
 echo ""
 echo "Build archive"
-cd ${THEMEDIR}
-zip -q DukeGlassNavy.zip -r gnome-shell gtk-3.0 index.theme
-ls -l ${THEMEDIR}/DukeGlassNavy.zip
+cd ${THEME_HOME}/../
+rm -f ${THEME_HOME}/${THEME_NAME}.zip
+zip -q ${THEME_HOME}/${THEME_NAME}.zip -r ${THEME_NAME}/gnome-shell ${THEME_NAME}/gtk-3.0 ${THEME_NAME}/index.theme
+
+cd ${THEME_HOME}
+ls -l ${THEME_HOME}/${THEME_NAME}.zip
 
