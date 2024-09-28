@@ -1,15 +1,12 @@
 [Desktop Entry]
-Name=Yaru-blue-dark
+Name=DukeGlassNavy
 Type=X-GNOME-Metatheme
-Comment=Ubuntu Yaru-blue-dark theme
+Comment=Ubuntu DukeGlassNavy theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Yaru-blue-dark
-MetacityTheme=Yaru-dark
-IconTheme=Yaru-blue-dark
-CursorTheme=Yaru
+GtkTheme=DukeGlassNavy
+MetacityTheme=DukeGlassNavy
+IconTheme=Kora
+CursorTheme=Breeze-Adapta-Cursor
 CursorSize=24
-X-Yaru-Dark=true
-X-Yaru-Accent-Name=blue
-X-Yaru-Accent-Color=#0073E5
