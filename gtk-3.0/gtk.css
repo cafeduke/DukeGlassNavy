@@ -27,6 +27,7 @@
 @define-color filechooser_bg_01   @primary_glass_bg_02;
 @define-color filechooser_bg_02   @primary_glass_bg_01;
 
+/* rgb(14,64,105) */
 @define-color sidebar_bg  @primary_bg_02;
 @define-color scroll_bg   rgb(0,60,80);
 
@@ -3585,7 +3586,7 @@ filechooser actionbar, filechooser actionbar > revealer > box {
 */
 .sidebar {
   border-style: none;
-  background-color: @sidebar_bg;
+  background-color: rgb(14,64,105);
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(separator):dir(ltr), .sidebar:not(separator).left {
@@ -3608,7 +3609,7 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 
 stacksidebar.sidebar list {
   padding: 4px;
-  background-color: @sidebar_bg;
+  background-color: rgb(14,64,110);
 }
 
 stacksidebar.sidebar row {
@@ -4224,13 +4225,13 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd {
-  background-color: @sidebar_bg;
+  background-color: rgb(14,64,115);
   border-radius: 0 0 16px 16px;
 }
 
 .nautilus-window.background.csd headerbar {
   padding-left: 8px;
-  background-color: @sidebar_bg;
+  background-color: rgb(14,64,120);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
@@ -4417,7 +4418,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd notebook > stack {
-  background-color: @sidebar_bg;
+  background-color: rgb(14,64,125);
   border-radius: 14px;
 }
 

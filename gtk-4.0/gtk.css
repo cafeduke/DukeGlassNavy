@@ -23,14 +23,10 @@
 @define-color button_bg           rgb(0,80,120);
 @define-color button_border_color rgb(0,100,160);
 
-@define-color menu_bg             @primary_glass_bg_01;
-@define-color filechooser_bg_01   @primary_glass_bg_02;
-@define-color filechooser_bg_02   @primary_glass_bg_01;
-
-@define-color sidebar_bg  alpha(@primary_bg, 0.95);
-@define-color scroll_bg   @primary_bg_02;
-
-@define-color toolbar_bg  rgb(0,60,80);
+@define-color menu_bg        @primary_glass_bg_01;
+@define-color sidebar_bg     alpha(@primary_bg, 0.95);
+@define-color contentbar_bg  @primary_glass_bg_02;
+@define-color toolbar_bg     rgb(0,60,80);
 
 @define-color disabled_bg    rgb(33,33,33);
 @define-color disabled_bg_01 rgb(36,36,36);
@@ -103,8 +99,9 @@ treeview.expander:disabled {
   -gtk-icon-filter: opacity(0.5);
 }
 
+/* Duke: FileExplorer: Content */
 iconview, .view {
-  background-color: @primary_glass_bg_02;
+  background-color: @contentbar_bg;
   color: white;
 }
 
@@ -113,7 +110,7 @@ iconview:disabled, .view:disabled {
 }
 
 textview text {
-  background-color: @primary_bg_02;
+  background-color:@primary_bg_02;
 }
 
 textview border {
@@ -2731,7 +2728,7 @@ notebook > stack:not(:only-child) {
  **************/
 scrollbar {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: @primary_bg_02;
+  background-color: @disabled_bg;
 }
 
 scrollbar.top {
